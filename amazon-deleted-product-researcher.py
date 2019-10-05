@@ -39,7 +39,7 @@ class AppURLopener(urllib.request.FancyURLopener):
 # list_with_cloodjo_pages = ''
 #  list_with_cloodjo_pages = ''
 list_with_cloodjo_pages = []
-domain = 'https://cloodjo.com'
+domain = ''
 
 opener = AppURLopener
 ssl._create_default_https_context = ssl._create_unverified_context
