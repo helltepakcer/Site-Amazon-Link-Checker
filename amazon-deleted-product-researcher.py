@@ -36,8 +36,8 @@ class AppURLopener(urllib.request.FancyURLopener):
         return super(AppURLopener, self).http_error_default(
             url, fp, errcode, errmsg, headers)
 
-# list_with_cloodjo_pages = ['https://cloodjo.com/best-sunscreens-acne-prone-skin-top-10-reviews','https://cloodjo.com/best-face-washes-acne-prone-skin-top-10-reviews','https://cloodjo.com/best-wall-chargers-market-top-10-reviews']
-#  list_with_cloodjo_pages = ['https://cloodjo.com/best-wall-chargers-market-top-10-reviews']
+# list_with_cloodjo_pages = ''
+#  list_with_cloodjo_pages = ''
 list_with_cloodjo_pages = []
 domain = 'https://cloodjo.com'
 
@@ -139,7 +139,7 @@ worksheet = workbook.add_worksheet('Site_data')
 
 col = 0
 row = 0
-# bad_amazon_links = {'https://cloodjo.com/makita-xph102-cordless-drill-kit': ['http://amzn.to/2iB7oEy'], 'https://cloodjo.com/best-fidget-cube-reviews': ['http://amzn.to/2sXhOzJ', 'http://amzn.to/2sWIWyL', 'http://amzn.to/2tgzMwa', 'http://amzn.to/2siw1sO', 'http://amzn.to/2swk8A7'], 'https://cloodjo.com/10-best-gps-hiking-watches-reviews': ['http://amzn.to/2sUoyOD'], 'https://cloodjo.com/best-fidget-spinner-top-10-reviews': ['http://amzn.to/2sHnOMC'], 'https://cloodjo.com/best-ice-crushers-market-top-10-reviews': ['http://amzn.to/2oXL5u4'], 'https://cloodjo.com/best-flea-tick-collars-dogs-top-10-reviews': ['http://amzn.to/2p0v4op'], 'https://cloodjo.com/best-projectors-gaming-top-10-reviews': ['http://amzn.to/2ezxOPI'], 'https://cloodjo.com/best-condenser-mics-market-top-10-reviews': ['http://amzn.to/2gs2pCW']}
+# bad_amazon_links = ''
 header_template = ["URL", "Broken Links"]
 for header_name in header_template:
     worksheet.write(row, col, header_name)
