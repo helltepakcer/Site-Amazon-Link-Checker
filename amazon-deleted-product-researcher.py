@@ -75,10 +75,6 @@ for one_page in list_with_cloodjo_pages:
     print('Amazon Links: ', amazon_links)
 
     for one_link in amazon_links:
-        #
-        # r = requests.get(one_link)
-        # n = 0
-
         opener = AppURLopener
         ssl._create_default_https_context = ssl._create_unverified_context
         try:
@@ -97,37 +93,8 @@ for one_page in list_with_cloodjo_pages:
                     bad_amazon_links[one_page].append(one_link)
                 else:
                     bad_amazon_links[one_page] = [one_link]
-        # url = r.url
+
         print('One Link', one_link)
-        # amaz_soup = BeautifulSoup(one_link, "lxml")
-        # print(amaz_soup)
-
-
-
-        # if r.status_code == 404:
-        #     if one_page in bad_amazon_links:
-        #         bad_amazon_links[one_page].append(one_link)
-        #     else:
-        #         bad_amazon_links[one_page] = [one_link]
-        #     continue
-        # if r.status_code == 200:
-        #     url_code = r.text
-        #
-        #     if url_code.find('did not match any products.') != -1:
-        #         if one_page in bad_amazon_links:
-        #             bad_amazon_links[one_page].append(one_link)
-        #         else:
-        #             bad_amazon_links[one_page] = [one_link]
-        #         continue
-        #
-        #     if url_code.find('We found <span class="a-color-base a-text-bold">0') != -1:
-        #         if one_page in bad_amazon_links:
-        #             bad_amazon_links[one_page].append(one_link)
-        #         else:
-        #             bad_amazon_links[one_page] = [one_link]
-        #         continue
-        # else:
-        #     pass
         print('Bad Results: ', bad_amazon_links)
         print('Without Results: ', without_result)
 
